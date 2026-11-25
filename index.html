@@ -1,0 +1,2654 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>蘑菇MV麻花星空MV大象视频_创意视频社区|影像创作者的家园</title>
+<meta name="description" content="蘑菇MV麻花星空MV大象视频，一个汇聚创意短片的视频品牌社区，为影像创作者提供作品展示、灵感碰撞与成长空间。">
+<style>
+    :root {
+        --bg-deep: #0a0e1a;
+        --bg-panel: #111827;
+        --bg-card: #16203a;
+        --bg-card-hover: #1c2a4a;
+        --accent: #5eead4;
+        --accent2: #818cf8;
+        --accent3: #f472b6;
+        --text-main: #e8edf7;
+        --text-sub: #94a3b8;
+        --text-dim: #64748b;
+        --border: rgba(148, 163, 184, 0.12);
+        --glow: rgba(94, 234, 212, 0.25);
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans SC", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+        background-color: var(--bg-deep);
+        color: var(--text-main);
+        line-height: 1.75;
+        overflow-x: hidden;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    img, svg {
+        display: block;
+        max-width: 100%;
+    }
+
+    ul, ol {
+        list-style: none;
+    }
+
+    button {
+        font-family: inherit;
+        cursor: pointer;
+        border: none;
+        background: none;
+        color: inherit;
+    }
+
+    input, textarea {
+        font-family: inherit;
+        font-size: 1rem;
+        color: inherit;
+        outline: none;
+        border: none;
+        background: none;
+    }
+
+    .container {
+        width: 92%;
+        max-width: 1240px;
+        margin: 0 auto;
+    }
+
+    /* ---------- 顶部导航 ---------- */
+    .site-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        transition: background 0.35s ease, box-shadow 0.35s ease, backdrop-filter 0.35s ease;
+        padding: 16px 0;
+    }
+
+    .site-header.scrolled {
+        background: rgba(10, 14, 26, 0.82);
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+        box-shadow: 0 1px 0 var(--border), 0 8px 30px rgba(0, 0, 0, 0.4);
+        padding: 10px 0;
+    }
+
+    .nav-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+    }
+
+    .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-weight: 800;
+        font-size: 1.15rem;
+        letter-spacing: 0.5px;
+        white-space: nowrap;
+    }
+
+    .brand-mark {
+        width: 42px;
+        height: 42px;
+        border-radius: 12px;
+        background: linear-gradient(135deg, var(--accent), var(--accent2) 60%, var(--accent3));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 6px 20px var(--glow);
+        flex-shrink: 0;
+    }
+
+    .brand-mark svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .brand-text span:first-child {
+        color: var(--text-main);
+    }
+
+    .brand-text span:last-child {
+        color: var(--accent);
+    }
+
+    .nav-menu {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .nav-menu a {
+        padding: 8px 16px;
+        border-radius: 999px;
+        font-size: 0.94rem;
+        color: var(--text-sub);
+        transition: color 0.25s, background 0.25s;
+        font-weight: 500;
+    }
+
+    .nav-menu a:hover {
+        color: var(--text-main);
+        background: rgba(94, 234, 212, 0.08);
+    }
+
+    .nav-actions {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 10px 22px;
+        border-radius: 999px;
+        font-size: 0.94rem;
+        font-weight: 600;
+        transition: transform 0.25s, box-shadow 0.25s, background 0.25s, color 0.25s;
+        white-space: nowrap;
+    }
+
+    .btn-ghost {
+        color: var(--text-sub);
+        border: 1px solid var(--border);
+    }
+
+    .btn-ghost:hover {
+        color: var(--text-main);
+        border-color: rgba(94, 234, 212, 0.4);
+    }
+
+    .btn-primary {
+        background: linear-gradient(135deg, var(--accent), var(--accent2));
+        color: #06121a;
+        box-shadow: 0 8px 24px rgba(94, 234, 212, 0.22);
+    }
+
+    .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 32px rgba(94, 234, 212, 0.36);
+    }
+
+    .menu-toggle {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        padding: 10px;
+    }
+
+    .menu-toggle span {
+        display: block;
+        width: 22px;
+        height: 2px;
+        background: var(--text-main);
+        border-radius: 2px;
+        transition: transform 0.3s, opacity 0.3s;
+    }
+
+    /* ---------- Hero 区域 ---------- */
+    .hero {
+        position: relative;
+        padding: 170px 0 110px;
+        overflow: hidden;
+    }
+
+    .hero-bg {
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        pointer-events: none;
+    }
+
+    .hero-grid {
+        position: absolute;
+        inset: 0;
+        background-image:
+            linear-gradient(rgba(148, 163, 184, 0.05) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(148, 163, 184, 0.05) 1px, transparent 1px);
+        background-size: 64px 64px;
+        mask-image: radial-gradient(ellipse 80% 60% at 50% 30%, #000 20%, transparent 75%);
+        -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 30%, #000 20%, transparent 75%);
+    }
+
+    .orb {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(90px);
+        opacity: 0.4;
+        animation: float 14s ease-in-out infinite;
+    }
+
+    .orb-1 {
+        width: 420px;
+        height: 420px;
+        background: radial-gradient(circle, rgba(94, 234, 212, 0.55), transparent 70%);
+        top: -120px;
+        left: -80px;
+    }
+
+    .orb-2 {
+        width: 480px;
+        height: 480px;
+        background: radial-gradient(circle, rgba(129, 140, 248, 0.5), transparent 70%);
+        top: 40px;
+        right: -140px;
+        animation-delay: -5s;
+    }
+
+    .orb-3 {
+        width: 360px;
+        height: 360px;
+        background: radial-gradient(circle, rgba(244, 114, 182, 0.35), transparent 70%);
+        bottom: -160px;
+        left: 38%;
+        animation-delay: -9s;
+    }
+
+    @keyframes float {
+        0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+        50% { transform: translate3d(0, -28px, 0) scale(1.06); }
+    }
+
+    .hero-inner {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 60px;
+        align-items: center;
+    }
+
+    .hero-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 7px 16px;
+        border-radius: 999px;
+        border: 1px solid rgba(94, 234, 212, 0.28);
+        background: rgba(94, 234, 212, 0.06);
+        color: var(--accent);
+        font-size: 0.86rem;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        margin-bottom: 26px;
+    }
+
+    .hero-tag .dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: var(--accent);
+        box-shadow: 0 0 0 4px rgba(94, 234, 212, 0.18);
+        animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+        0%, 100% { box-shadow: 0 0 0 4px rgba(94, 234, 212, 0.18); }
+        50% { box-shadow: 0 0 0 9px rgba(94, 234, 212, 0.04); }
+    }
+
+    .hero h1 {
+        font-size: clamp(2.4rem, 5vw, 4rem);
+        font-weight: 900;
+        line-height: 1.18;
+        letter-spacing: -1px;
+        margin-bottom: 22px;
+        background: linear-gradient(110deg, #ffffff 15%, var(--accent) 50%, var(--accent2) 85%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+    }
+
+    .hero-sub {
+        font-size: 1.08rem;
+        color: var(--text-sub);
+        max-width: 560px;
+        margin-bottom: 34px;
+    }
+
+    .hero-sub strong {
+        color: var(--text-main);
+        font-weight: 600;
+    }
+
+    .hero-cta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-bottom: 46px;
+    }
+
+    .hero-cta .btn {
+        padding: 14px 30px;
+        font-size: 1rem;
+    }
+
+    .hero-stats {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 44px;
+    }
+
+    .stat {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+    }
+
+    .stat-num {
+        font-size: 1.9rem;
+        font-weight: 800;
+        color: var(--text-main);
+        letter-spacing: -0.5px;
+        font-variant-numeric: tabular-nums;
+    }
+
+    .stat-num em {
+        font-style: normal;
+        color: var(--accent);
+        font-size: 1.1rem;
+        margin-left: 2px;
+    }
+
+    .stat-label {
+        font-size: 0.85rem;
+        color: var(--text-dim);
+        letter-spacing: 0.4px;
+    }
+
+    /* Hero 右侧播放卡 */
+    .hero-visual {
+        position: relative;
+    }
+
+    .player-card {
+        position: relative;
+        border-radius: 22px;
+        border: 1px solid var(--border);
+        background: linear-gradient(160deg, rgba(22, 32, 58, 0.95), rgba(17, 24, 39, 0.92));
+        box-shadow: 0 30px 80px rgba(0, 0, 0, 0.55);
+        overflow: hidden;
+    }
+
+    .player-screen {
+        position: relative;
+        aspect-ratio: 16 / 10;
+        background:
+            radial-gradient(circle at 30% 25%, rgba(94, 234, 212, 0.28), transparent 55%),
+            radial-gradient(circle at 75% 70%, rgba(129, 140, 248, 0.32), transparent 60%),
+            linear-gradient(150deg, #0d1526, #131f38 60%, #0a0e1a);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .player-screen::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+            radial-gradient(circle at 20% 30%, rgba(255,255,255,0.5) 1px, transparent 1.6px),
+            radial-gradient(circle at 60% 18%, rgba(255,255,255,0.4) 1px, transparent 1.6px),
+            radial-gradient(circle at 82% 44%, rgba(255,255,255,0.45) 1px, transparent 1.6px),
+            radial-gradient(circle at 38% 72%, rgba(255,255,255,0.35) 1px, transparent 1.6px),
+            radial-gradient(circle at 70% 84%, rgba(255,255,255,0.4) 1px, transparent 1.6px),
+            radial-gradient(circle at 12% 82%, rgba(255,255,255,0.3) 1px, transparent 1.6px);
+        opacity: 0.7;
+        animation: twinkle 6s ease-in-out infinite alternate;
+    }
+
+    @keyframes twinkle {
+        0% { opacity: 0.35; }
+        100% { opacity: 0.85; }
+    }
+
+    .play-btn {
+        position: relative;
+        width: 78px;
+        height: 78px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        backdrop-filter: blur(8px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.3s, background 0.3s;
+        z-index: 2;
+    }
+
+    .play-btn:hover {
+        transform: scale(1.08);
+        background: rgba(94, 234, 212, 0.22);
+    }
+
+    .play-btn::after {
+        content: "";
+        position: absolute;
+        inset: -10px;
+        border-radius: 50%;
+        border: 1px solid rgba(94, 234, 212, 0.35);
+        animation: ring 2.4s ease-out infinite;
+    }
+
+    @keyframes ring {
+        0% { transform: scale(0.9); opacity: 0.8; }
+        100% { transform: scale(1.5); opacity: 0; }
+    }
+
+    .play-btn svg {
+        width: 26px;
+        height: 26px;
+        margin-left: 4px;
+        fill: #fff;
+    }
+
+    .player-meta {
+        padding: 18px 22px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        border-top: 1px solid var(--border);
+    }
+
+    .player-title {
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: var(--text-main);
+    }
+
+    .player-title small {
+        display: block;
+        font-size: 0.78rem;
+        font-weight: 400;
+        color: var(--text-dim);
+        margin-top: 2px;
+    }
+
+    .live-badge {
+        padding: 4px 12px;
+        border-radius: 999px;
+        font-size: 0.74rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        color: #06121a;
+        background: var(--accent);
+        flex-shrink: 0;
+    }
+
+    .float-card {
+        position: absolute;
+        border-radius: 14px;
+        border: 1px solid var(--border);
+        background: rgba(17, 24, 39, 0.86);
+        backdrop-filter: blur(14px);
+        padding: 12px 16px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+        animation: float 8s ease-in-out infinite;
+        font-size: 0.82rem;
+        font-weight: 600;
+        color: var(--text-main);
+    }
+
+    .float-card.card-1 {
+        top: -22px;
+        right: -10px;
+        animation-delay: -2s;
+    }
+
+    .float-card.card-2 {
+        bottom: 84px;
+        left: -26px;
+        animation-delay: -4.5s;
+    }
+
+    .float-icon {
+        width: 30px;
+        height: 30px;
+        border-radius: 9px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+    }
+
+    .float-icon.t {
+        background: rgba(94, 234, 212, 0.16);
+        color: var(--accent);
+    }
+
+    .float-icon.i {
+        background: rgba(129, 140, 248, 0.16);
+        color: var(--accent2);
+    }
+
+    .float-card small {
+        display: block;
+        color: var(--text-dim);
+        font-size: 0.72rem;
+        font-weight: 400;
+    }
+
+    /* ---------- 通用 section ---------- */
+    .section {
+        padding: 96px 0;
+        position: relative;
+    }
+
+    .section-head {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 30px;
+        margin-bottom: 52px;
+        flex-wrap: wrap;
+    }
+
+    .section-head-left {
+        max-width: 620px;
+    }
+
+    .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 0.82rem;
+        font-weight: 700;
+        letter-spacing: 2.5px;
+        color: var(--accent);
+        margin-bottom: 14px;
+        text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+        content: "";
+        width: 26px;
+        height: 2px;
+        background: linear-gradient(90deg, var(--accent), transparent);
+    }
+
+    .section-title {
+        font-size: clamp(1.7rem, 3.4vw, 2.5rem);
+        font-weight: 800;
+        line-height: 1.3;
+        letter-spacing: -0.5px;
+        color: var(--text-main);
+    }
+
+    .section-title em {
+        font-style: normal;
+        background: linear-gradient(120deg, var(--accent), var(--accent2));
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+    }
+
+    .section-desc {
+        color: var(--text-sub);
+        margin-top: 14px;
+        font-size: 0.99rem;
+        max-width: 620px;
+    }
+
+    /* ---------- 频道分类 ---------- */
+    .channel-tabs {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 40px;
+    }
+
+    .tab-btn {
+        padding: 9px 20px;
+        border-radius: 999px;
+        border: 1px solid var(--border);
+        color: var(--text-sub);
+        font-size: 0.9rem;
+        font-weight: 600;
+        transition: all 0.25s;
+        background: var(--bg-panel);
+    }
+
+    .tab-btn:hover {
+        color: var(--text-main);
+        border-color: rgba(94, 234, 212, 0.35);
+    }
+
+    .tab-btn.active {
+        background: linear-gradient(135deg, var(--accent), var(--accent2));
+        color: #06121a;
+        border-color: transparent;
+        box-shadow: 0 6px 20px rgba(94, 234, 212, 0.22);
+    }
+
+    .video-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 26px;
+    }
+
+    .video-card {
+        border-radius: 18px;
+        border: 1px solid var(--border);
+        background: var(--bg-card);
+        overflow: hidden;
+        transition: transform 0.35s, border-color 0.35s, box-shadow 0.35s, background 0.35s;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .video-card:hover {
+        transform: translateY(-6px);
+        border-color: rgba(94, 234, 212, 0.35);
+        box-shadow: 0 22px 50px rgba(0, 0, 0, 0.5);
+        background: var(--bg-card-hover);
+    }
+
+    .video-thumb {
+        position: relative;
+        aspect-ratio: 16 / 9;
+        background: linear-gradient(150deg, #14203a, #0d1526 70%);
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .video-thumb::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to top, rgba(10, 14, 26, 0.75), transparent 55%);
+    }
+
+    .thumb-art {
+        position: absolute;
+        inset: 0;
+        opacity: 0.9;
+        transition: transform 0.5s ease;
+    }
+
+    .video-card:hover .thumb-art {
+        transform: scale(1.05);
+    }
+
+    .thumb-art svg {
+        width: 100%;
+        height: 100%;
+    }
+
+    .thumb-duration {
+        position: absolute;
+        right: 12px;
+        bottom: 12px;
+        z-index: 2;
+        padding: 3px 9px;
+        border-radius: 6px;
+        font-size: 0.74rem;
+        font-weight: 600;
+        background: rgba(0, 0, 0, 0.65);
+        color: #fff;
+        letter-spacing: 0.5px;
+    }
+
+    .thumb-play {
+        position: absolute;
+        z-index: 3;
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.14);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(6px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transform: scale(0.85);
+        transition: opacity 0.3s, transform 0.3s;
+    }
+
+    .video-card:hover .thumb-play {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    .thumb-play svg {
+        width: 18px;
+        height: 18px;
+        fill: #fff;
+        margin-left: 3px;
+    }
+
+    .video-info {
+        padding: 18px 20px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        flex: 1;
+    }
+
+    .video-title {
+        font-size: 1.02rem;
+        font-weight: 700;
+        line-height: 1.5;
+        color: var(--text-main);
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .video-sub {
+        font-size: 0.85rem;
+        color: var(--text-dim);
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .video-foot {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        margin-top: auto;
+        padding-top: 6px;
+    }
+
+    .author {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 0.82rem;
+        color: var(--text-sub);
+    }
+
+    .avatar {
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.7rem;
+        font-weight: 700;
+        color: #06121a;
+        flex-shrink: 0;
+    }
+
+    .avatar.a1 { background: linear-gradient(135deg, #5eead4, #818cf8); }
+    .avatar.a2 { background: linear-gradient(135deg, #f472b6, #818cf8); }
+    .avatar.a3 { background: linear-gradient(135deg, #5eead4, #f472b6); }
+    .avatar.a4 { background: linear-gradient(135deg, #818cf8, #5eead4); }
+    .avatar.a5 { background: linear-gradient(135deg, #fbbf24, #f472b6); }
+    .avatar.a6 { background: linear-gradient(135deg, #34d399, #818cf8); }
+
+    .views {
+        font-size: 0.78rem;
+        color: var(--text-dim);
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        white-space: nowrap;
+    }
+
+    .views svg {
+        width: 14px;
+        height: 14px;
+        fill: currentColor;
+    }
+
+    /* ---------- 关于品牌 ---------- */
+    .about-wrap {
+        display: grid;
+        grid-template-columns: 0.95fr 1.05fr;
+        gap: 60px;
+        align-items: center;
+    }
+
+    .about-visual {
+        position: relative;
+        border-radius: 24px;
+        border: 1px solid var(--border);
+        background: linear-gradient(160deg, rgba(22, 32, 58, 0.8), rgba(17, 24, 39, 0.6));
+        padding: 34px;
+        overflow: hidden;
+    }
+
+    .about-visual::before {
+        content: "";
+        position: absolute;
+        width: 320px;
+        height: 320px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(94, 234, 212, 0.22), transparent 70%);
+        top: -100px;
+        right: -100px;
+        filter: blur(40px);
+    }
+
+    .about-canvas {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .about-bar {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+    }
+
+    .about-bar-label {
+        width: 96px;
+        font-size: 0.82rem;
+        color: var(--text-sub);
+        flex-shrink: 0;
+    }
+
+    .about-bar-track {
+        flex: 1;
+        height: 9px;
+        border-radius: 999px;
+        background: rgba(148, 163, 184, 0.12);
+        overflow: hidden;
+    }
+
+    .about-bar-fill {
+        height: 100%;
+        border-radius: 999px;
+        background: linear-gradient(90deg, var(--accent), var(--accent2));
+        width: 0;
+        transition: width 1.4s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .about-bar-fill.c { background: linear-gradient(90deg, var(--accent3), var(--accent2)); }
+    .about-bar-fill.d { background: linear-gradient(90deg, #fbbf24, var(--accent3)); }
+
+    .about-bar-val {
+        font-size: 0.8rem;
+        color: var(--text-dim);
+        width: 42px;
+        text-align: right;
+        flex-shrink: 0;
+        font-variant-numeric: tabular-nums;
+    }
+
+    .about-points {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+        margin-top: 32px;
+    }
+
+    .about-point {
+        padding: 18px;
+        border-radius: 14px;
+        border: 1px solid var(--border);
+        background: rgba(22, 32, 58, 0.5);
+        transition: border-color 0.3s, background 0.3s;
+    }
+
+    .about-point:hover {
+        border-color: rgba(94, 234, 212, 0.3);
+        background: rgba(22, 32, 58, 0.8);
+    }
+
+    .about-point h4 {
+        font-size: 0.96rem;
+        font-weight: 700;
+        margin-bottom: 6px;
+        color: var(--text-main);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .about-point h4::before {
+        content: "";
+        width: 7px;
+        height: 7px;
+        border-radius: 2px;
+        background: var(--accent);
+        transform: rotate(45deg);
+        flex-shrink: 0;
+    }
+
+    .about-point p {
+        font-size: 0.84rem;
+        color: var(--text-sub);
+        line-height: 1.7;
+    }
+
+    .about-text p {
+        color: var(--text-sub);
+        margin-bottom: 16px;
+        font-size: 0.99rem;
+    }
+
+    .about-text p strong {
+        color: var(--text-main);
+        font-weight: 600;
+    }
+
+    /* ---------- 创作者 ---------- */
+    .creator-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 22px;
+    }
+
+    .creator-card {
+        border-radius: 18px;
+        border: 1px solid var(--border);
+        background: var(--bg-card);
+        padding: 26px 22px;
+        text-align: center;
+        transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .creator-card:hover {
+        transform: translateY(-6px);
+        border-color: rgba(129, 140, 248, 0.4);
+        box-shadow: 0 20px 46px rgba(0, 0, 0, 0.45);
+    }
+
+    .creator-avatar {
+        width: 68px;
+        height: 68px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.35rem;
+        font-weight: 800;
+        color: #06121a;
+        margin-bottom: 16px;
+        position: relative;
+    }
+
+    .creator-avatar::after {
+        content: "";
+        position: absolute;
+        inset: -5px;
+        border-radius: 50%;
+        border: 1px solid rgba(94, 234, 212, 0.3);
+    }
+
+    .creator-name {
+        font-size: 1rem;
+        font-weight: 700;
+        color: var(--text-main);
+        margin-bottom: 4px;
+    }
+
+    .creator-role {
+        font-size: 0.79rem;
+        color: var(--accent);
+        margin-bottom: 12px;
+        letter-spacing: 0.5px;
+    }
+
+    .creator-bio {
+        font-size: 0.82rem;
+        color: var(--text-sub);
+        line-height: 1.65;
+        margin-bottom: 16px;
+        flex: 1;
+    }
+
+    .creator-fans {
+        font-size: 0.78rem;
+        color: var(--text-dim);
+        padding-top: 14px;
+        border-top: 1px solid var(--border);
+        width: 100%;
+    }
+
+    .creator-fans strong {
+        color: var(--text-main);
+        font-weight: 700;
+    }
+
+    /* ---------- 活动 / 时间线 ---------- */
+    .activity-list {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .activity-item {
+        display: grid;
+        grid-template-columns: 96px 1fr auto;
+        gap: 28px;
+        align-items: center;
+        padding: 26px 30px;
+        border-radius: 16px;
+        border: 1px solid var(--border);
+        background: var(--bg-panel);
+        transition: border-color 0.3s, background 0.3s, transform 0.3s;
+    }
+
+    .activity-item:hover {
+        border-color: rgba(94, 234, 212, 0.3);
+        background: var(--bg-card);
+        transform: translateX(6px);
+    }
+
+    .activity-date {
+        text-align: center;
+        border-right: 1px solid var(--border);
+        padding-right: 20px;
+    }
+
+    .activity-date .d {
+        display: block;
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: var(--accent);
+        line-height: 1.2;
+        font-variant-numeric: tabular-nums;
+    }
+
+    .activity-date .m {
+        display: block;
+        font-size: 0.78rem;
+        color: var(--text-dim);
+        letter-spacing: 1px;
+    }
+
+    .activity-body h4 {
+        font-size: 1.02rem;
+        font-weight: 700;
+        color: var(--text-main);
+        margin-bottom: 6px;
+    }
+
+    .activity-body p {
+        font-size: 0.86rem;
+        color: var(--text-sub);
+        line-height: 1.7;
+    }
+
+    .activity-tag {
+        padding: 5px 14px;
+        border-radius: 999px;
+        font-size: 0.76rem;
+        font-weight: 600;
+        background: rgba(94, 234, 212, 0.1);
+        color: var(--accent);
+        border: 1px solid rgba(94, 234, 212, 0.24);
+        white-space: nowrap;
+    }
+
+    /* ---------- 数据区 ---------- */
+    .metrics {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0;
+        border-radius: 20px;
+        border: 1px solid var(--border);
+        background: linear-gradient(150deg, rgba(22, 32, 58, 0.7), rgba(17, 24, 39, 0.7));
+        overflow: hidden;
+    }
+
+    .metric {
+        padding: 40px 26px;
+        text-align: center;
+        border-right: 1px solid var(--border);
+        transition: background 0.3s;
+    }
+
+    .metric:last-child {
+        border-right: none;
+    }
+
+    .metric:hover {
+        background: rgba(94, 234, 212, 0.05);
+    }
+
+    .metric-num {
+        font-size: clamp(1.8rem, 3vw, 2.5rem);
+        font-weight: 900;
+        color: var(--text-main);
+        letter-spacing: -1px;
+        line-height: 1.1;
+        font-variant-numeric: tabular-nums;
+    }
+
+    .metric-num em {
+        font-style: normal;
+        color: var(--accent);
+        font-size: 1.2rem;
+    }
+
+    .metric-label {
+        font-size: 0.85rem;
+        color: var(--text-dim);
+        margin-top: 8px;
+        letter-spacing: 0.5px;
+    }
+
+    /* ---------- 加入 / CTA ---------- */
+    .cta-section {
+        padding: 96px 0;
+    }
+
+    .cta-box {
+        position: relative;
+        border-radius: 28px;
+        border: 1px solid rgba(94, 234, 212, 0.22);
+        background:
+            radial-gradient(circle at 15% 20%, rgba(94, 234, 212, 0.16), transparent 45%),
+            radial-gradient(circle at 85% 80%, rgba(129, 140, 248, 0.18), transparent 50%),
+            linear-gradient(150deg, #0f1a30, #0a0e1a);
+        padding: 68px 56px;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    .cta-box::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+            radial-gradient(circle at 24% 30%, rgba(255,255,255,0.4) 1px, transparent 1.6px),
+            radial-gradient(circle at 68% 22%, rgba(255,255,255,0.32) 1px, transparent 1.6px),
+            radial-gradient(circle at 82% 62%, rgba(255,255,255,0.35) 1px, transparent 1.6px),
+            radial-gradient(circle at 42% 78%, rgba(255,255,255,0.3) 1px, transparent 1.6px),
+            radial-gradient(circle at 12% 70%, rgba(255,255,255,0.28) 1px, transparent 1.6px);
+        opacity: 0.55;
+        pointer-events: none;
+    }
+
+    .cta-box h2 {
+        position: relative;
+        font-size: clamp(1.7rem, 3.4vw, 2.5rem);
+        font-weight: 800;
+        letter-spacing: -0.5px;
+        margin-bottom: 18px;
+        line-height: 1.3;
+    }
+
+    .cta-box h2 em {
+        font-style: normal;
+        background: linear-gradient(120deg, var(--accent), var(--accent2));
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+    }
+
+    .cta-box p {
+        position: relative;
+        color: var(--text-sub);
+        max-width: 620px;
+        margin: 0 auto 34px;
+        font-size: 1rem;
+    }
+
+    .cta-form {
+        position: relative;
+        display: flex;
+        gap: 12px;
+        max-width: 520px;
+        margin: 0 auto;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .cta-form input {
+        flex: 1;
+        min-width: 220px;
+        padding: 15px 22px;
+        border-radius: 999px;
+        border: 1px solid var(--border);
+        background: rgba(10, 14, 26, 0.6);
+        color: var(--text-main);
+        font-size: 0.95rem;
+        transition: border-color 0.25s, box-shadow 0.25s;
+    }
+
+    .cta-form input::placeholder {
+        color: var(--text-dim);
+    }
+
+    .cta-form input:focus {
+        border-color: rgba(94, 234, 212, 0.5);
+        box-shadow: 0 0 0 4px rgba(94, 234, 212, 0.08);
+    }
+
+    .cta-form .btn {
+        padding: 15px 34px;
+    }
+
+    .form-note {
+        position: relative;
+        font-size: 0.8rem;
+        color: var(--text-dim);
+        margin-top: 16px;
+        min-height: 20px;
+    }
+
+    .form-note.ok {
+        color: var(--accent);
+    }
+
+    /* ---------- FAQ ---------- */
+    .faq-list {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .faq-item {
+        border-radius: 14px;
+        border: 1px solid var(--border);
+        background: var(--bg-panel);
+        overflow: hidden;
+        transition: border-color 0.3s;
+    }
+
+    .faq-item.open {
+        border-color: rgba(94, 234, 212, 0.3);
+    }
+
+    .faq-q {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 20px 24px;
+        text-align: left;
+        font-size: 0.98rem;
+        font-weight: 600;
+        color: var(--text-main);
+        transition: color 0.25s;
+    }
+
+    .faq-q:hover {
+        color: var(--accent);
+    }
+
+    .faq-icon {
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        border: 1px solid var(--border);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        transition: transform 0.3s, background 0.3s, border-color 0.3s;
+        position: relative;
+    }
+
+    .faq-icon::before,
+    .faq-icon::after {
+        content: "";
+        position: absolute;
+        background: currentColor;
+        border-radius: 2px;
+        transition: transform 0.3s, opacity 0.3s;
+    }
+
+    .faq-icon::before {
+        width: 11px;
+        height: 1.6px;
+    }
+
+    .faq-icon::after {
+        width: 1.6px;
+        height: 11px;
+    }
+
+    .faq-item.open .faq-icon {
+        transform: rotate(180deg);
+        background: rgba(94, 234, 212, 0.14);
+        border-color: rgba(94, 234, 212, 0.4);
+        color: var(--accent);
+    }
+
+    .faq-item.open .faq-icon::after {
+        opacity: 0;
+    }
+
+    .faq-a {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+    }
+
+    .faq-a-inner {
+        padding: 0 24px 22px;
+        color: var(--text-sub);
+        font-size: 0.9rem;
+        line-height: 1.8;
+    }
+
+    /* ---------- Footer ---------- */
+    .site-footer {
+        border-top: 1px solid var(--border);
+        padding: 64px 0 36px;
+        background: linear-gradient(to bottom, transparent, rgba(17, 24, 39, 0.6));
+    }
+
+    .footer-top {
+        display: grid;
+        grid-template-columns: 1.4fr 1fr 1fr 1fr;
+        gap: 40px;
+        margin-bottom: 48px;
+    }
+
+    .footer-brand p {
+        color: var(--text-sub);
+        font-size: 0.88rem;
+        margin-top: 16px;
+        max-width: 320px;
+        line-height: 1.8;
+    }
+
+    .footer-col h4 {
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: var(--text-main);
+        margin-bottom: 16px;
+        letter-spacing: 0.5px;
+    }
+
+    .footer-col ul {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer-col a {
+        font-size: 0.86rem;
+        color: var(--text-sub);
+        transition: color 0.25s;
+    }
+
+    .footer-col a:hover {
+        color: var(--accent);
+    }
+
+    .footer-bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        padding-top: 28px;
+        border-top: 1px solid var(--border);
+        flex-wrap: wrap;
+    }
+
+    .footer-bottom p {
+        font-size: 0.8rem;
+        color: var(--text-dim);
+    }
+
+    .social-links {
+        display: flex;
+        gap: 10px;
+    }
+
+    .social-links a {
+        width: 36px;
+        height: 36px;
+        border-radius: 10px;
+        border: 1px solid var(--border);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--text-sub);
+        transition: color 0.25s, border-color 0.25s, background 0.25s;
+    }
+
+    .social-links a:hover {
+        color: var(--accent);
+        border-color: rgba(94, 234, 212, 0.4);
+        background: rgba(94, 234, 212, 0.08);
+    }
+
+    .social-links svg {
+        width: 17px;
+        height: 17px;
+        fill: currentColor;
+    }
+
+    /* ---------- 滚动揭示 ---------- */
+    .reveal {
+        opacity: 0;
+        transform: translateY(34px);
+        transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* ---------- 响应式 ---------- */
+    @media (max-width: 1080px) {
+        .hero-inner {
+            grid-template-columns: 1fr;
+            gap: 54px;
+        }
+        .hero-visual {
+            max-width: 560px;
+        }
+        .video-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .creator-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .about-wrap {
+            grid-template-columns: 1fr;
+            gap: 44px;
+        }
+        .footer-top {
+            grid-template-columns: 1fr 1fr;
+            gap: 34px;
+        }
+    }
+
+    @media (max-width: 860px) {
+        .nav-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 4%;
+            right: 4%;
+            flex-direction: column;
+            align-items: stretch;
+            gap: 4px;
+            padding: 14px;
+            margin-top: 10px;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            background: rgba(17, 24, 39, 0.97);
+            backdrop-filter: blur(18px);
+            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6);
+        }
+        .nav-menu.open {
+            display: flex;
+        }
+        .nav-menu a {
+            padding: 12px 16px;
+            border-radius: 10px;
+        }
+        .nav-actions .btn-ghost {
+            display: none;
+        }
+        .menu-toggle {
+            display: flex;
+        }
+        .menu-toggle.active span:nth-child(1) {
+            transform: translateY(7px) rotate(45deg);
+        }
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+        .menu-toggle.active span:nth-child(3) {
+            transform: translateY(-7px) rotate(-45deg);
+        }
+        .metrics {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .metric {
+            border-right: none;
+            border-bottom: 1px solid var(--border);
+        }
+        .metric:nth-child(odd) {
+            border-right: 1px solid var(--border);
+        }
+        .metric:nth-last-child(-n+2) {
+            border-bottom: none;
+        }
+        .activity-item {
+            grid-template-columns: 1fr;
+            gap: 14px;
+        }
+        .activity-date {
+            display: flex;
+            align-items: baseline;
+            gap: 8px;
+            border-right: none;
+            padding-right: 0;
+            text-align: left;
+        }
+        .activity-tag {
+            justify-self: start;
+        }
+        .cta-box {
+            padding: 50px 28px;
+        }
+    }
+
+    @media (max-width: 620px) {
+        .hero {
+            padding: 140px 0 80px;
+        }
+        .section {
+            padding: 68px 0;
+        }
+        .video-grid {
+            grid-template-columns: 1fr;
+        }
+        .creator-grid {
+            grid-template-columns: 1fr;
+        }
+        .hero-stats {
+            gap: 28px;
+        }
+        .about-points {
+            grid-template-columns: 1fr;
+        }
+        .footer-top {
+            grid-template-columns: 1fr;
+        }
+        .float-card.card-2 {
+            left: 0;
+        }
+        .float-card.card-1 {
+            right: 0;
+        }
+        .metrics {
+            grid-template-columns: 1fr;
+        }
+        .metric {
+            border-right: none !important;
+            border-bottom: 1px solid var(--border);
+        }
+        .metric:last-child {
+            border-bottom: none;
+        }
+        .activity-item {
+            padding: 22px 20px;
+        }
+        .section-head {
+            margin-bottom: 36px;
+        }
+    }
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- ==================== 顶部导航 ==================== -->
+<header class="site-header" id="siteHeader">
+    <div class="container nav-inner">
+        <a href="#" class="brand" aria-label="蘑菇MV麻花星空MV大象视频首页">
+            <span class="brand-mark">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 6.5C4 5.12 5.12 4 6.5 4h11C18.88 4 20 5.12 20 6.5v11c0 1.38-1.12 2.5-2.5 2.5h-11C5.12 20 4 18.88 4 17.5v-11Z" stroke="#06121a" stroke-width="1.6"/>
+                    <path d="M10 9.2v5.6c0 .5.55.8.97.53l4.3-2.8a.63.63 0 0 0 0-1.06l-4.3-2.8A.63.63 0 0 0 10 9.2Z" fill="#06121a"/>
+                </svg>
+            </span>
+            <span class="brand-text"><span>蘑菇麻花</span><span>·星空大象</span></span>
+        </a>
+
+        <nav class="nav-menu" id="navMenu">
+            <a href="#channels">频道精选</a>
+            <a href="#about">品牌故事</a>
+            <a href="#creators">创作者</a>
+            <a href="#events">社区活动</a>
+            <a href="#faq">常见问答</a>
+        </nav>
+
+        <div class="nav-actions">
+            <a href="#join" class="btn btn-ghost">登录</a>
+            <a href="#join" class="btn btn-primary">加入社区</a>
+            <button class="menu-toggle" id="menuToggle" aria-label="展开菜单">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- ==================== Hero ==================== -->
+<section class="hero">
+    <div class="hero-bg">
+        <div class="hero-grid"></div>
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+    <div class="container hero-inner">
+        <div class="hero-content">
+            <div class="hero-tag reveal">
+                <span class="dot"></span>
+                创意影像 · 持续更新中
+            </div>
+            <h1 class="reveal">蘑菇MV麻花星空MV大象视频</h1>
+            <p class="hero-sub reveal">
+                一个把奇思妙想变成画面的地方。在这里，<strong>蘑菇</strong>般的灵感自由生长，
+                <strong>麻花</strong>式的叙事层层缠绕，<strong>星空</strong>之下每一次播放都像一场
+                <strong>大象</strong>般沉稳而温柔的远行。
+            </p>
+            <div class="hero-cta reveal">
+                <a href="#channels" class="btn btn-primary">浏览精选频道</a>
+                <a href="#creators" class="btn btn-ghost">认识创作者</a>
+            </div>
+            <div class="hero-stats reveal">
+                <div class="stat">
+                    <span class="stat-num" data-count="12600">0<em>+</em></span>
+                    <span class="stat-label">上线原创短片</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-num" data-count="3800">0<em>+</em></span>
+                    <span class="stat-label">入驻创作者</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-num" data-count="92">0<em>万</em></span>
+                    <span class="stat-label">月度播放量</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-visual reveal">
+            <div class="player-card">
+                <div class="player-screen">
+                    <button class="play-btn" aria-label="播放预告片">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5.5v13c0 .8.87 1.3 1.56.87l10.06-6.5a1.03 1.03 0 0 0 0-1.74L9.56 4.63A1.03 1.03 0 0 0 8 5.5Z"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="player-meta">
+                    <div class="player-title">
+                        本期主推 · 星野漫游计划
+                        <small>蘑菇影像实验室 出品</small>
+                    </div>
+                    <span class="live-badge">HD</span>
+                </div>
+            </div>
+            <div class="float-card card-1">
+                <span class="float-icon t">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2 9.8 8.2 3 9.6l5 4.7L6.8 21 12 17.6 17.2 21 16 14.3l5-4.7-6.8-1.4L12 2Z"/>
+                    </svg>
+                </span>
+                <div>
+                    精选推荐
+                    <small>本周 128 部</small>
+                </div>
+            </div>
+            <div class="float-card card-2">
+                <span class="float-icon i">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 4h16v12H7l-3 3V4Z"/>
+                    </svg>
+                </span>
+                <div>
+                    实时弹幕互动
+                    <small>每秒 320 条</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== 频道精选 ==================== -->
+<section class="section" id="channels">
+    <div class="container">
+        <div class="section-head reveal">
+            <div class="section-head-left">
+                <span class="eyebrow">精选频道</span>
+                <h2 class="section-title">每一个分类，都是一片<em>可漫游的星空</em></h2>
+                <p class="section-desc">
+                    从生活记录到实验影像，从幕后花絮到声音诗篇，蘑菇MV麻花星空MV大象视频为你整理出多元内容分区，让观看变成一次次有方向的发现。
+                </p>
+            </div>
+            <a href="#join" class="btn btn-ghost">查看全部内容</a>
+        </div>
+
+        <div class="channel-tabs reveal" id="channelTabs">
+            <button class="tab-btn active" data-filter="all">全部</button>
+            <button class="tab-btn" data-filter="life">生活记录</button>
+            <button class="tab-btn" data-filter="experiment">实验影像</button>
+            <button class="tab-btn" data-filter="behind">幕后花絮</button>
+            <button class="tab-btn" data-filter="sound">声音诗篇</button>
+        </div>
+
+        <div class="video-grid" id="videoGrid">
+            <!-- 卡片 1 -->
+            <article class="video-card reveal" data-category="life">
+                <div class="video-thumb">
+                    <div class="thumb-art">
+                        <svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+                                    <stop offset="0%" stop-color="#0f2a3a"/>
+                                    <stop offset="55%" stop-color="#144a4a"/>
+                                    <stop offset="100%" stop-color="#0a1a2e"/>
+                                </linearGradient>
+                            </defs>
+                            <rect width="400" height="225" fill="url(#g1)"/>
+                            <circle cx="310" cy="52" r="34" fill="#5eead4" opacity="0.35"/>
+                            <circle cx="310" cy="52" r="54" fill="none" stroke="#5eead4" stroke-opacity="0.22" stroke-width="1.5"/>
+                            <path d="M0 168 Q90 130 170 158 T400 150 V225 H0 Z" fill="#0a1424" opacity="0.85"/>
+                            <path d="M0 188 Q110 156 210 180 T400 172 V225 H0 Z" fill="#081020"/>
+                            <circle cx="80" cy="80" r="2" fill="#fff" opacity="0.8"/>
+                            <circle cx="130" cy="50" r="1.5" fill="#fff" opacity="0.6"/>
+                            <circle cx="190" cy="92" r="1.6" fill="#fff" opacity="0.7"/>
+                            <circle cx="240" cy="40" r="1.4" fill="#fff" opacity="0.5"/>
+                        </svg>
+                    </div>
+                    <div class="thumb-play">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5.5v13c0 .8.87 1.3 1.56.87l10.06-6.5a1.03 1.03 0 0 0 0-1.74L9.56 4.63A1.03 1.03 0 0 0 8 5.5Z"/></svg>
+                    </div>
+                    <span class="thumb-duration">06:42</span>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">凌晨四点的海岸线，与潮汐一起醒来</h3>
+                    <p class="video-sub">用一段完整的日出过程，记录小城最安静的时刻。</p>
+                    <div class="video-foot">
+                        <div class="author">
+                            <span class="avatar a1">林</span>
+                            林间慢镜头
+                        </div>
+                        <span class="views">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 5c-5 0-9 4.5-9 7s4 7 9 7 9-4.5 9-7-4-7-9-7Zm0 11a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm0-2a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/></svg>
+                            12.4万
+                        </span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 卡片 2 -->
+            <article class="video-card reveal" data-category="experiment">
+                <div class="video-thumb">
+                    <div class="thumb-art">
+                        <svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1">
+                                    <stop offset="0%" stop-color="#1b1035"/>
+                                    <stop offset="50%" stop-color="#2a1c55"/>
+                                    <stop offset="100%" stop-color="#0d0a20"/>
+                                </linearGradient>
+                            </defs>
+                            <rect width="400" height="225" fill="url(#g2)"/>
+                            <circle cx="200" cy="112" r="70" fill="none" stroke="#818cf8" stroke-opacity="0.35" stroke-width="1.2"/>
+                            <circle cx="200" cy="112" r="52" fill="none" stroke="#f472b6" stroke-opacity="0.3" stroke-width="1.2"/>
+                            <circle cx="200" cy="112" r="34" fill="none" stroke="#5eead4" stroke-opacity="0.4" stroke-width="1.2"/>
+                            <circle cx="200" cy="112" r="10" fill="#818cf8" opacity="0.8"/>
+                            <circle cx="252" cy="112" r="3" fill="#5eead4"/>
+                            <circle cx="148" cy="112" r="2.5" fill="#f472b6"/>
+                            <circle cx="200" cy="60" r="2.5" fill="#fff" opacity="0.8"/>
+                            <circle cx="200" cy="164" r="2" fill="#818cf8"/>
+                        </svg>
+                    </div>
+                    <div class="thumb-play">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5.5v13c0 .8.87 1.3 1.56.87l10.06-6.5a1.03 1.03 0 0 0 0-1.74L9.56 4.63A1.03 1.03 0 0 0 8 5.5Z"/></svg>
+                    </div>
+                    <span class="thumb-duration">04:18</span>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">用一百个光点，重绘一段失重的梦</h3>
+                    <p class="video-sub">粒子与节拍同步的实验短片，视觉与听觉的微妙共振。</p>
+                    <div class="video-foot">
+                        <div class="author">
+                            <span class="avatar a2">苏</span>
+                            苏黎的暗房
+                        </div>
+                        <span class="views">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 5c-5 0-9 4.5-9 7s4 7 9 7 9-4.5 9-7-4-7-9-7Zm0 11a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm0-2a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/></svg>
+                            8.7万
+                        </span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 卡片 3 -->
+            <article class="video-card reveal" data-category="behind">
+                <div class="video-thumb">
+                    <div class="thumb-art">
+                        <svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="g3" x1="0" y1="0" x2="1" y2="1">
+                                    <stop offset="0%" stop-color="#301a24"/>
+                                    <stop offset="55%" stop-color="#4a2038"/>
+                                    <stop offset="100%" stop-color="#180a14"/>
+                                </linearGradient>
+                            </defs>
+                            <rect width="400" height="225" fill="url(#g3)"/>
+                            <rect x="70" y="58" width="120" height="80" rx="8" fill="none" stroke="#f472b6" stroke-opacity="0.5" stroke-width="1.4"/>
+                            <rect x="210" y="88" width="120" height="60" rx="8" fill="none" stroke="#818cf8" stroke-opacity="0.5" stroke-width="1.4"/>
+                            <circle cx="200" cy="60" r="20" fill="none" stroke="#5eead4" stroke-opacity="0.45" stroke-width="1.4"/>
+                            <path d="M70 156 L180 190 L330 150" stroke="#f472b6" stroke-opacity="0.4" stroke-width="1.4" fill="none"/>
+                            <circle cx="120" cy="120" r="3" fill="#f472b6"/>
+                            <circle cx="270" cy="118" r="3" fill="#818cf8"/>
+                        </svg>
+                    </div>
+                    <div class="thumb-play">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5.5v13c0 .8.87 1.3 1.56.87l10.06-6.5a1.03 1.03 0 0 0 0-1.74L9.56 4.63A1.03 1.03 0 0 0 8 5.5Z"/></svg>
+                    </div>
+                    <span class="thumb-duration">09:05</span>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">一部短片是怎样诞生的：分镜、灯光与争吵</h3>
+                    <p class="video-sub">跟随幕后镜头，看看创意如何在碰撞中被一点点打磨出来。</p>
+                    <div class="video-foot">
+                        <div class="author">
+                            <span class="avatar a3">阿</span>
+                            阿禾的剧组日记
+                        </div>
+                        <span class="views">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 5c-5 0-9 4.5-9 7s4 7 9 7 9-4.5 9-7-4-7-9-7Zm0 11a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm0-2a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/></svg>
+                            15.2万
+                        </span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 卡片 4 -->
+            <article class="video-card reveal" data-category="sound">
+                <div class="video-thumb">
+                    <div class="thumb-art">
+                        <svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="g4" x1="0" y1="0" x2="1" y2="1">
+                                    <stop offset="0%" stop-color="#0a2030"/>
+                                    <stop offset="60%" stop-color="#123a3a"/>
+                                    <stop offset="100%" stop-color="#08141e"/>
+                                </linearGradient>
+                            </defs>
+                            <rect width="400" height="225" fill="url(#g4)"/>
+                            <path d="M0 112 Q25 70 50 112 T100 112 T150 112 T200 112 T250 112 T300 112 T350 112 T400 112" stroke="#5eead4" stroke-opacity="0.55" stroke-width="1.6" fill="none"/>
+                            <path d="M0 132 Q30 96 60 132 T120 132 T180 132 T240 132 T300 132 T360 132 T400 132" stroke="#818cf8" stroke-opacity="0.4" stroke-width="1.4" fill="none"/>
+                            <path d="M0 92 Q20 58 40 92 T80 92 T120 92 T160 92 T200 92 T240 92 T280 92 T320 92 T360 92 T400 92" stroke="#f472b6" stroke-opacity="0.35" stroke-width="1.2" fill="none"/>
+                            <circle cx="200" cy="112" r="4" fill="#fff" opacity="0.9"/>
+                        </svg>
+                    </div>
+                    <div class="thumb-play">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5.5v13c0 .8.87 1.3 1.56.87l10.06-6.5a1.03 1.03 0 0 0 0-1.74L9.56 4.63A1.03 1.03 0 0 0 8 5.5Z"/></svg>
+                    </div>
+                    <span class="thumb-duration">05:27</span>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">雨声、铁轨与老磁带：一段城市的声音诗</h3>
+                    <p class="video-sub">没有对白，只有被忽略的日常声响，在波形里重新排列。</p>
+                    <div class="video-foot">
+                        <div class="author">
+                            <span class="avatar a4">声</span>
+                            声音收集者
+                        </div>
+                        <span class="views">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 5c-5 0-9 4.5-9 7s4 7 9 7 9-4.5 9-7-4-7-9-7Zm0 11a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm0-2a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/></svg>
+                            6.3万
+                        </span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 卡片 5 -->
+            <article class="video-card reveal" data-category="life">
+                <div class="video-thumb">
+                    <div class="thumb-art">
+                        <svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="g5" x1="0" y1="0" x2="1" y2="1">
+                                    <stop offset="0%" stop-color="#2a2410"/>
+                                    <stop offset="55%" stop-color="#4a3a18"/>
+                                    <stop offset="100%" stop-color="#1a1408"/>
+                                </linearGradient>
+                            </defs>
+                            <rect width="400" height="225" fill="url(#g5)"/>
+                            <circle cx="200" cy="150" r="60" fill="#fbbf24" opacity="0.18"/>
+                            <path d="M0 160 Q100 120 200 150 T400 140 V225 H0 Z" fill="#1a1408" opacity="0.8"/>
+                            <path d="M0 180 Q120 148 240 174 T400 166 V225 H0 Z" fill="#0f0c06" opacity="0.9"/>
+                            <circle cx="200" cy="60" r="1.5" fill="#fbbf24" opacity="0.7"/>
+                            <circle cx="300" cy="80" r="1.2" fill="#fbbf24" opacity="0.5"/>
+                            <circle cx="120" cy="50" r="1.2" fill="#fbbf24" opacity="0.5"/>
+                        </svg>
+                    </div>
+                    <div class="thumb-play">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5.5v13c0 .8.87 1.3 1.56.87l10.06-6.5a1.03 1.03 0 0 0 0-1.74L9.56 4.63A1.03 1.03 0 0 0 8 5.5Z"/></svg>
+                    </div>
+                    <span class="thumb-duration">08:12</span>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">在旧书店待一整天，会遇见什么</h3>
+                    <p class="video-sub">缓慢的镜头、翻页的声音，以及陌生人留下的批注。</p>
+                    <div class="video-foot">
+                        <div class="author">
+                            <span class="avatar a5">周</span>
+                            周日的慢生活
+                        </div>
+                        <span class="views">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 5c-5 0-9 4.5-9 7s4 7 9 7 9-4.5 9-7-4-7-9-7Zm0 11a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm0-2a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/></svg>
+                            21.6万
+                        </span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 卡片 6 -->
+            <article class="video-card reveal" data-category="experiment">
+                <div class="video-thumb">
+                    <div class="thumb-art">
+                        <svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="g6" x1="0" y1="0" x2="1" y2="1">
+                                    <stop offset="0%" stop-color="#0e2236"/>
+                                    <stop offset="50%" stop-color="#12304a"/>
+                                    <stop offset="100%" stop-color="#07121e"/>
+                                </linearGradient>
+                            </defs>
+                            <rect width="400" height="225" fill="url(#g6)"/>
+                            <polygon points="200,40 280,180 120,180" fill="none" stroke="#5eead4" stroke-opacity="0.45" stroke-width="1.4"/>
+                            <polygon points="200,70 250,160 150,160" fill="none" stroke="#818cf8" stroke-opacity="0.3" stroke-width="1.2"/>
+                            <circle cx="200" cy="140" r="26" fill="#5eead4" opacity="0.12"/>
+                            <circle cx="200" cy="140" r="4" fill="#5eead4" opacity="0.9"/>
+                            <circle cx="100" cy="60" r="1.6" fill="#fff" opacity="0.6"/>
+                            <circle cx="310" cy="50" r="1.4" fill="#fff" opacity="0.5"/>
+                            <circle cx="330" cy="120" r="1.3" fill="#fff" opacity="0.4"/>
+                        </svg>
+                    </div>
+                    <div class="thumb-play">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5.5v13c0 .8.87 1.3 1.56.87l10.06-6.5a1.03 1.03 0 0 0 0-1.74L9.56 4.63A1.03 1.03 0 0 0 8 5.5Z"/></svg>
+                    </div>
+                    <span class="thumb-duration">03:56</span>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">几何体与光的游戏：一段无声实验影像</h3>
+                    <p class="video-sub">当形状被光切开，画面本身变成了一场缓慢的演算。</p>
+                    <div class="video-foot">
+                        <div class="author">
+                            <span class="avatar a6">镜</span>
+                            镜面结构
+                        </div>
+                        <span class="views">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 5c-5 0-9 4.5-9 7s4 7 9 7 9-4.5 9-7-4-7-9-7Zm0 11a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm0-2a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/></svg>
+                            4.9万
+                        </span>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== 品牌故事 ==================== -->
+<section class="section" id="about">
+    <div class="container">
+        <div class="about-wrap">
+            <div class="about-visual reveal">
+                <div class="about-canvas">
+                    <div class="about-bar">
+                        <span class="about-bar-label">原创内容占比</span>
+                        <div class="about-bar-track"><div class="about-bar-fill" data-width="87"></div></div>
+                        <span class="about-bar-val">87%</span>
+                    </div>
+                    <div class="about-bar">
+                        <span class="about-bar-label">创作者留存</span>
+                        <div class="about-bar-track"><div class="about-bar-fill c" data-width="92"></div></div>
+                        <span class="about-bar-val">92%</span>
+                    </div>
+                    <div class="about-bar">
+                        <span class="about-bar-label">社区互动率</span>
+                        <div class="about-bar-track"><div class="about-bar-fill d" data-width="78"></div></div>
+                        <span class="about-bar-val">78%</span>
+                    </div>
+                    <div class="about-bar">
+                        <span class="about-bar-label">内容更新频次</span>
+                        <div class="about-bar-track"><div class="about-bar-fill" data-width="95"></div></div>
+                        <span class="about-bar-val">95%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-text reveal">
+                <span class="eyebrow">品牌故事</span>
+                <h2 class="section-title">我们相信，好影像值得被<em>认真对待</em></h2>
+                <p>
+                    蘑菇MV麻花星空MV大象视频起步于一个小型放映夜谈，几位热爱短片的朋友挤在一间屋子里，就着投影仪的光讨论画面与节奏。后来，这个夜晚变成了每周的固定约定，再后来，变成了一个面向所有影像爱好者的开放社区。
+                </p>
+                <p>
+                    我们把品牌拆成四个词，也拆成四种态度：<strong>蘑菇</strong>代表在潮湿角落里也能生长的灵感，<strong>麻花</strong>代表叙事中那些缠绕、转折、不肯直行的部分，<strong>星空</strong>代表视野与想象力的边界，<strong>大象</strong>代表我们对内容质量那份缓慢却稳重的坚持。
+                </p>
+                <p>
+                    这里不追捧快餐式的爆款，更愿意给一部短片、一位创作者、一个冷门题材足够的耐心。我们提供清晰的展示位、完整的作品档案、可被检索的分类体系，以及一个愿意认真看完并留下评论的观众群体。
+                </p>
+
+                <div class="about-points">
+                    <div class="about-point">
+                        <h4>原创优先</h4>
+                        <p>首发作品获得额外曝光，平台优先推荐未经搬运的独立创作内容。</p>
+                    </div>
+                    <div class="about-point">
+                        <h4>分类清晰</h4>
+                        <p>生活记录、实验影像、幕后花絮、声音诗篇，内容各有归处。</p>
+                    </div>
+                    <div class="about-point">
+                        <h4>互动友好</h4>
+                        <p>弹幕与评论并重，鼓励有内容的讨论而非情绪化的刷屏。</p>
+                    </div>
+                    <div class="about-point">
+                        <h4>长期成长</h4>
+                        <p>为创作者提供创作基金、联合放映与跨区域合作的机会。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== 创作者 ==================== -->
+<section class="section" id="creators">
+    <div class="container">
+        <div class="section-head reveal">
+            <div class="section-head-left">
+                <span class="eyebrow">社区创作者</span>
+                <h2 class="section-title">让每一份<em>坚持</em>都被看见</h2>
+                <p class="section-desc">
+                    社区里有正在读书的学生、下班后剪辑的上班族、自由职业的摄影师，也有成立工作室的小团队。他们更新频率不同、题材各异，却共享同一种对影像的执着。
+                </p>
+            </div>
+            <a href="#join" class="btn btn-ghost">成为创作者</a>
+        </div>
+
+        <div class="creator-grid">
+            <div class="creator-card reveal">
+                <div class="creator-avatar" style="background: linear-gradient(135deg, #5eead4, #818cf8);">林</div>
+                <h4 class="creator-name">林间慢镜头</h4>
+                <span class="creator-role">生活记录 · 影像博主</span>
+                <p class="creator-bio">喜欢清晨和长镜头，坚持用自然光拍完每一条片子。</p>
+                <div class="creator-fans"><strong>18.6万</strong> 关注者</div>
+            </div>
+
+            <div class="creator-card reveal">
+                <div class="creator-avatar" style="background: linear-gradient(135deg, #f472b6, #818cf8);">苏</div>
+                <h4 class="creator-name">苏黎的暗房</h4>
+                <span class="creator-role">实验影像 · 视觉设计</span>
+                <p class="creator-bio">把代码与胶片混在一起，执着于画面里的秩序感。</p>
+                <div class="creator-fans"><strong>12.2万</strong> 关注者</div>
+            </div>
+
+            <div class="creator-card reveal">
+                <div class="creator-avatar" style="background: linear-gradient(135deg, #5eead4, #f472b6);">阿</div>
+                <h4 class="creator-name">阿禾的剧组日记</h4>
+                <span class="creator-role">幕后花絮 · 独立导演</span>
+                <p class="creator-bio">拍片十年，更愿意把镜头对准镜头背后的那些人。</p>
+                <div class="creator-fans"><strong>25.4万</strong> 关注者</div>
+            </div>
+
+            <div class="creator-card reveal">
+                <div class="creator-avatar" style="background: linear-gradient(135deg, #818cf8, #5eead4);">声</div>
+                <h4 class="creator-name">声音收集者</h4>
+                <span class="creator-role">声音诗篇 · 声音设计</span>
+                <p class="creator-bio">用一支录音笔走过很多城市，收集被忽略的声音纹理。</p>
+                <div class="creator-fans"><strong>9.8万</strong> 关注者</div>
+            </div>
+
+            <div class="creator-card reveal">
+                <div class="creator-avatar" style="background: linear-gradient(135deg, #fbbf24, #f472b6);">周</div>
+                <h4 class="creator-name">周日的慢生活</h4>
+                <span class="creator-role">生活记录 · 内容编辑</span>
+                <p class="creator-bio">相信慢一点的内容，反而更容易被记住。</p>
+                <div class="creator-fans"><strong>31.0万</strong> 关注者</div>
+            </div>
+
+            <div class="creator-card reveal">
+                <div class="creator-avatar" style="background: linear-gradient(135deg, #34d399, #818cf8);">镜</div>
+                <h4 class="creator-name">镜面结构</h4>
+                <span class="creator-role">实验影像 · 数字艺术</span>
+                <p class="creator-bio">用几何与光构建空间，探索无叙事的画面可能性。</p>
+                <div class="creator-fans"><strong>7.5万</strong> 关注者</div>
+            </div>
+
+            <div class="creator-card reveal">
+                <div class="creator-avatar" style="background: linear-gradient(135deg, #5eead4, #fbbf24);">野</div>
+                <h4 class="creator-name">野格放映室</h4>
+                <span class="creator-role">幕后花絮 · 联合发起人</span>
+                <p class="creator-bio">组织线下放映超过六十场，把短片带到更多小空间。</p>
+                <div class="creator-fans"><strong>14.7万</strong> 关注者</div>
+            </div>
+
+            <div class="creator-card reveal">
+                <div class="creator-avatar" style="background: linear-gradient(135deg, #f472b6, #5eead4);">木</div>
+                <h4 class="creator-name">木卫二的夜晚</h4>
+                <span class="creator-role">声音诗篇 · 独立音乐人</span>
+                <p class="creator-bio">为独立短片配乐，也把自己的夜晚做成可以听的影像。</p>
+                <div class="creator-fans"><strong>11.3万</strong> 关注者</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== 数据 ==================== -->
+<section class="section" style="padding-top: 0;">
+    <div class="container">
+        <div class="metrics reveal">
+            <div class="metric">
+                <div class="metric-num"><span data-count="12600">0</span><em>+</em></div>
+                <div class="metric-label">上线原创短片</div>
+            </div>
+            <div class="metric">
+                <div class="metric-num"><span data-count="3800">0</span><em>+</em></div>
+                <div class="metric-label">入驻创作者</div>
+            </div>
+            <div class="metric">
+                <div class="metric-num"><span data-count="920">0</span><em>万</em></div>
+                <div class="metric-label">月度总播放量</div>
+            </div>
+            <div class="metric">
+                <div class="metric-num"><span data-count="64">0</span><em>场</em></div>
+                <div class="metric-label">线下放映活动</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== 社区活动 ==================== -->
+<section class="section" id="events">
+    <div class="container">
+        <div class="section-head reveal">
+            <div class="section-head-left">
+                <span class="eyebrow">社区活动</span>
+                <h2 class="section-title">线上更新之外，我们也在<em>线下见面</em></h2>
+                <p class="section-desc">
+                    放映、工作坊、创作者对谈、主题征片，社区的活动排期始终保持流动。以下为近期部分活动，具体报名方式可在社区公告中查看。
+                </p>
+            </div>
+        </div>
+
+        <div class="activity-list">
+            <div class="activity-item reveal">
+                <div class="activity-date">
+                    <span class="d">18</span>
+                    <span class="m">06月</span>
+                </div>
+                <div class="activity-body">
+                    <h4>「星野放映」第 64 期 · 夏夜短片合集</h4>
+                    <p>露天放映十二部社区原创短片，涵盖生活记录与实验影像两个单元，映后设有创作者交流环节。</p>
+                </div>
+                <span class="activity-tag">线下放映</span>
+            </div>
+
+            <div class="activity-item reveal">
+                <div class="activity-date">
+                    <span class="d">25</span>
+                    <span class="m">06月</span>
+                </div>
+                <div class="activity-body">
+                    <h4>声音与画面工作坊 · 从采样到成片</h4>
+                    <p>由社区声音设计创作者带领，用半天时间完成一段三分钟的声音影像小品，适合零基础参与者。</p>
+                </div>
+                <span class="activity-tag">创作工作坊</span>
+            </div>
+
+            <div class="activity-item reveal">
+                <div class="activity-date">
+                    <span class="d">09</span>
+                    <span class="m">07月</span>
+                </div>
+                <div class="activity-body">
+                    <h4>主题征片：以「麻花」为题的缠绕叙事</h4>
+                    <p>面向所有创作者征集三至十分钟短片，鼓励非线性结构与多线索叙事，入选作品将获得首页推荐位。</p>
+                </div>
+                <span class="activity-tag">征片计划</span>
+            </div>
+
+            <div class="activity-item reveal">
+                <div class="activity-date">
+                    <span class="d">20</span>
+                    <span class="m">07月</span>
+                </div>
+                <div class="activity-body">
+                    <h4>创作者对谈：慢内容的生存方式</h4>
+                    <p>邀请四位持续更新三年以上的社区创作者，聊一聊如何在节奏越来越快的环境里保持自己的创作节拍。</p>
+                </div>
+                <span class="activity-tag">线上直播</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== FAQ ==================== -->
+<section class="section" id="faq">
+    <div class="container">
+        <div class="section-head reveal" style="justify-content: center; text-align: center;">
+            <div class="section-head-left" style="max-width: 720px;">
+                <span class="eyebrow" style="justify-content: center;">常见问答</span>
+                <h2 class="section-title">关于蘑菇MV麻花星空MV大象视频的<em>一些说明</em></h2>
+                <p class="section-desc" style="margin-left: auto; margin-right: auto;">
+                    我们整理了几个新朋友最常问的问题，如果仍有疑问，欢迎通过页脚的联系入口与我们沟通。
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-list reveal">
+            <div class="faq-item">
+                <button class="faq-q">
+                    这个平台主要收录哪类视频内容？
+                    <span class="faq-icon"></span>
+                </button>
+                <div class="faq-a">
+                    <div class="faq-a-inner">
+                        蘑菇MV麻花星空MV大象视频以原创短片为核心，内容覆盖生活记录、实验影像、幕后花絮与声音诗篇四大方向。我们更关注作品的完整度与表达意图，而非单纯的流量指标，因此搬运、拼接与低完成度的内容不在收录范围内。
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-q">
+                    我想成为创作者，需要满足什么条件？
+                    <span class="faq-icon"></span>
+                </button>
+                <div class="faq-a">
+                    <div class="faq-a-inner">
+                        我们不设硬性的粉丝数门槛。只要你能提交至少一部完整的原创短片，并同意社区的内容规范，就可以申请入驻。申请通道开放期间，编辑团队会在五个工作日内完成内容审核并给出反馈，包含改进建议。
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-q">
+                    社区活动需要付费参加吗？
+                    <span class="faq-icon"></span>
+                </button>
+                <div class="faq-a">
+                    <div class="faq-a-inner">
+                        大部分线上活动与征片计划完全免费；线下放映与工作坊因涉及场地与物料，会收取少量成本费用，学生与社区活跃创作者可申请减免。每场活动的具体说明都会在报名页面中清楚列出。
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-q">
+                    作品版权如何归属？
+                    <span class="faq-icon"></span>
+                </button>
+                <div class="faq-a">
+                    <div class="faq-a-inner">
+                        所有作品的完整版权始终归创作者本人所有。平台仅在展示与推荐所需的范围内获得非独占授权，创作者可随时申请下架或调整展示范围，且不影响其在其他平台的发布。
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-q">
+                    如何联系社区团队？
+                    <span class="faq-icon"></span>
+                </button>
+                <div class="faq-a">
+                    <div class="faq-a-inner">
+                        你可以通过页脚的邮箱入口发送邮件，也可以在社区内私信任意一位编辑团队成员。我们通常会在两到三个工作日内回复，涉及合作与放映授权的咨询请尽量在邮件标题中注明来意。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== CTA / 加入 ==================== -->
+<section class="cta-section" id="join">
+    <div class="container">
+        <div class="cta-box reveal">
+            <h2>下一段值得被看见的画面，<br>也许正<em>在你的镜头里</em></h2>
+            <p>
+                订阅社区通讯，第一时间收到新片推荐、征片计划与线下放映信息。我们不发无关邮件，也不把你的邮箱交给第三方。
+            </p>
+            <form class="cta-form" id="subscribeForm" novalidate>
+                <input type="email" id="emailInput" placeholder="输入你的邮箱地址" aria-label="邮箱地址" autocomplete="email">
+                <button type="submit" class="btn btn-primary">订阅社区通讯</button>
+            </form>
+            <p class="form-note" id="formNote">每周一封，随时可以取消订阅。</p>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== Footer ==================== -->
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <a href="#" class="brand">
+                    <span class="brand-mark">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 6.5C4 5.12 5.12 4 6.5 4h11C18.88 4 20 5.12 20 6.5v11c0 1.38-1.12 2.5-2.5 2.5h-11C5.12 20 4 18.88 4 17.5v-11Z" stroke="#06121a" stroke-width="1.6"/>
+                            <path d="M10 9.2v5.6c0 .5.55.8.97.53l4.3-2.8a.63.63 0 0 0 0-1.06l-4.3-2.8A.63.63 0 0 0 10 9.2Z" fill="#06121a"/>
+                        </svg>
+                    </span>
+                    <span class="brand-text"><span>蘑菇麻花</span><span>·星空大象</span></span>
+                </a>
+                <p>蘑菇MV麻花星空MV大象视频，一个为原创短片与影像创作者而生的社区。让灵感生长，让画面被认真看完。</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>浏览内容</h4>
+                <ul>
+                    <li><a href="#channels">生活记录</a></li>
+                    <li><a href="#channels">实验影像</a></li>
+                    <li><a href="#channels">幕后花絮</a></li>
+                    <li><a href="#channels">声音诗篇</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>社区</h4>
+                <ul>
+                    <li><a href="#creators">创作者中心</a></li>
+                    <li><a href="#events">活动日程</a></li>
+                    <li><a href="#faq">常见问答</a></li>
+                    <li><a href="#join">订阅通讯</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>关于</h4>
+                <ul>
+                    <li><a href="#about">品牌故事</a></li>
+                    <li><a href="#join">合作与授权</a></li>
+                    <li><a href="#join">内容规范</a></li>
+                    <li><a href="#join">联系我们</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2024 蘑菇MV麻花星空MV大象视频社区 · 保留所有权利</p>
+            <div class="social-links">
+                <a href="#" aria-label="微博">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10.5 8.5c-3 0-5.5 2-5.5 4.5s2.5 4.5 5.5 4.5 5.5-2 5.5-4.5-2.5-4.5-5.5-4.5Zm0 8a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7Zm7.2-9.2a4.4 4.4 0 0 1 2.3 2.5.6.6 0 0 1-1.1.4 3.2 3.2 0 0 0-1.7-1.8.6.6 0 0 1 .5-1.1ZM18 4.6a6.4 6.4 0 0 1 3.5 3.9.6.6 0 0 1-1.1.4 5.2 5.2 0 0 0-2.9-3.2.6.6 0 0 1 .5-1.1Z"/></svg>
+                </a>
+                <a href="#" aria-label="视频平台">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.5 7.2a3 3 0 0 0-2.1-2.1C16.6 4.6 12 4.6 12 4.6s-4.6 0-6.4.5A3 3 0 0 0 3.5 7.2 31 31 0 0 0 3 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.8.5 6.4.5 6.4.5s4.6 0 6.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 21 12a31 31 0 0 0-.5-4.8ZM10 15V9l5 3-5 3Z"/></svg>
+                </a>
+                <a href="#" aria-label="播客">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 3a4 4 0 0 0-4 4v5a4 4 0 0 0 8 0V7a4 4 0 0 0-4-4Zm-6 9a.9.9 0 0 1 1.8 0 4.3 4.3 0 0 0 8.4 0 .9.9 0 0 1 1.8 0 6 6 0 0 1-5 5.9V20h2.5a.9.9 0 0 1 0 1.8h-7a.9.9 0 0 1 0-1.8H11v-2.2a6 6 0 0 1-5-5.9Z"/></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+(function () {
+    'use strict';
+
+    /* ---------- 顶部导航滚动状态 ---------- */
+    var header = document.getElementById('siteHeader');
+    function onScrollHeader() {
+        if (window.scrollY > 24) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    }
+    window.addEventListener('scroll', onScrollHeader, { passive: true });
+    onScrollHeader();
+
+    /* ---------- 移动端菜单 ---------- */
+    var menuToggle = document.getElementById('menuToggle');
+    var navMenu = document.getElementById('navMenu');
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', function () {
+            var isOpen = navMenu.classList.toggle('open');
+            menuToggle.classList.toggle('active', isOpen);
+        });
+        navMenu.addEventListener('click', function (e) {
+            if (e.target.tagName === 'A') {
+                navMenu.classList.remove('open');
+                menuToggle.classList.remove('active');
+            }
+        });
+    }
+
+    /* ---------- 滚动揭示 ---------- */
+    var revealEls = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
+    if ('IntersectionObserver' in window) {
+        var revealObserver = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    var el = entry.target;
+                    var delay = el.dataset.delay ? parseInt(el.dataset.delay, 10) : 0;
+                    setTimeout(function () {
+                        el.classList.add('visible');
+                    }, delay);
+                    revealObserver.unobserve(el);
+                }
+            });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+        revealEls.forEach(function (el, i) {
+            var siblings = el.parentElement ? Array.prototype.slice.call(el.parentElement.children) : [];
+            var index = siblings.indexOf(el);
+            if (index > 0 && index < 6) {
+                el.dataset.delay = String(index * 70);
+            }
+            revealObserver.observe(el);
+        });
+    } else {
+        revealEls.forEach(function (el) { el.classList.add('visible'); });
+    }
+
+    /* ---------- 数字滚动 ---------- */
+    var counters = Array.prototype.slice.call(document.querySelectorAll('[data-count]'));
+    function animateCount(el) {
+        var target = parseInt(el.dataset.count, 10);
+        if (isNaN(target)) return;
+        var suffix = el.querySelector('em');
+        var duration = 1600;
+        var start = null;
+
+        function step(ts) {
+            if (!start) start = ts;
+            var progress = Math.min((ts - start) / duration, 1);
+            var eased = 1 - Math.pow(1 - progress, 3);
+            var current = Math.round(eased * target);
+            var text = current >= 10000
+                ? (current / 10000).toFixed(1).replace(/\.0$/, '') + '万'
+                : String(current);
+            if (suffix) {
+                el.firstChild.nodeValue = text;
+            } else {
+                el.textContent = text;
+            }
+            if (progress < 1) {
+                requestAnimationFrame(step);
+            }
+        }
+        requestAnimationFrame(step);
+    }
+
+    if ('IntersectionObserver' in window) {
+        var countObserver = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    animateCount(entry.target);
+                    countObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        counters.forEach(function (el) { countObserver.observe(el); });
+    } else {
+        counters.forEach(animateCount);
+    }
+
+    /* ---------- 进度条动画 ---------- */
+    var barFills = Array.prototype.slice.call(document.querySelectorAll('.about-bar-fill'));
+    if ('IntersectionObserver' in window) {
+        var barObserver = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    var el = entry.target;
+                    var w = el.dataset.width || '0';
+                    setTimeout(function () {
+                        el.style.width = w + '%';
+                    }, 120);
+                    barObserver.unobserve(el);
+                }
+            });
+        }, { threshold: 0.4 });
+        barFills.forEach(function (el) { barObserver.observe(el); });
+    } else {
+        barFills.forEach(function (el) { el.style.width = (el.dataset.width || 0) + '%'; });
+    }
+
+    /* ---------- 频道筛选 ---------- */
+    var tabs = Array.prototype.slice.call(document.querySelectorAll('.tab-btn'));
+    var cards = Array.prototype.slice.call(document.querySelectorAll('.video-card'));
+
+    tabs.forEach(function (tab) {
+        tab.addEventListener('click', function () {
+            tabs.forEach(function (t) { t.classList.remove('active'); });
+            tab.classList.add('active');
+            var filter = tab.dataset.filter;
+
+            cards.forEach(function (card, idx) {
+                var show = filter === 'all' || card.dataset.category === filter;
+                if (show) {
+                    card.style.display = '';
+                    card.classList.remove('visible');
+                    void card.offsetWidth;
+                    setTimeout(function () {
+                        card.classList.add('visible');
+                    }, idx * 40);
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
+
+    /* ---------- FAQ 手风琴 ---------- */
+    var faqItems = Array.prototype.slice.call(document.querySelectorAll('.faq-item'));
+    faqItems.forEach(function (item) {
+        var btn = item.querySelector('.faq-q');
+        var panel = item.querySelector('.faq-a');
+        if (!btn || !panel) return;
+
+        btn.addEventListener('click', function () {
+            var isOpen = item.classList.contains('open');
+            faqItems.forEach(function (other) {
+                other.classList.remove('open');
+                var otherPanel = other.querySelector('.faq-a');
+                if (otherPanel) otherPanel.style.maxHeight = null;
+            });
+            if (!isOpen) {
+                item.classList.add('open');
+                panel.style.maxHeight = panel.scrollHeight + 'px';
+            }
+        });
+    });
+    if (faqItems.length) {
+        var first = faqItems[0];
+        first.classList.add('open');
+        var firstPanel = first.querySelector('.faq-a');
+        if (firstPanel) {
+            firstPanel.style.maxHeight = firstPanel.scrollHeight + 'px';
+        }
+    }
+
+    /* ---------- 订阅表单 ---------- */
+    var form = document.getElementById('subscribeForm');
+    var emailInput = document.getElementById('emailInput');
+    var formNote = document.getElementById('formNote');
+
+    if (form && emailInput && formNote) {
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            var value = emailInput.value.trim();
+            var ok = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(value);
+            if (!ok) {
+                formNote.textContent = '请输入有效的邮箱地址，例如 name@example.com。';
+                formNote.classList.remove('ok');
+                emailInput.focus();
+                return;
+            }
+            formNote.textContent = '订阅成功，欢迎加入蘑菇MV麻花星空MV大象视频社区，请留意你的邮箱。';
+            formNote.classList.add('ok');
+            emailInput.value = '';
+        });
+
+        emailInput.addEventListener('input', function () {
+            if (formNote.classList.contains('ok')) {
+                formNote.classList.remove('ok');
+                formNote.textContent = '每周一封，随时可以取消订阅。';
+            }
+        });
+    }
+
+    /* ---------- 播放按钮演示交互 ---------- */
+    var playBtn = document.querySelector('.play-btn');
+    if (playBtn) {
+        playBtn.addEventListener('click', function () {
+            playBtn.style.transform = 'scale(0.92)';
+            setTimeout(function () {
+                playBtn.style.transform = '';
+            }, 180);
+        });
+    }
+
+    /* ---------- 平滑锚点（兼容不支持 scroll-behavior 的浏览器） ---------- */
+    var anchorLinks = Array.prototype.slice.call(document.querySelectorAll('a[href^="#"]'));
+    anchorLinks.forEach(function (link) {
+        link.addEventListener('click', function (e) {
+            var href = link.getAttribute('href');
+            if (!href || href === '#') return;
+            var target = document.querySelector(href);
+            if (!target) return;
+            e.preventDefault();
+            var offset = 72;
+            var top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+            if ('scrollBehavior' in document.documentElement.style) {
+                window.scrollTo({ top: top, behavior: 'smooth' });
+            } else {
+                window.scrollTo(0, top);
+            }
+        });
+    });
+})();
+</script>
+
+</body>
+                                  </html>
